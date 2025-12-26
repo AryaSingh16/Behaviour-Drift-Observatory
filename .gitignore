@@ -1,0 +1,28 @@
+# Virtual Environments
+bdo/
+venv/
+env/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE
+.vscode/settings.json
+.idea/
+
+# OS
+.DS Store
+Thumbs.db
+
+# Environment
+.env
+
+# Exclude specific analysis script
+src/analyze_user_varieties.py
+
+# Exclude parquet data files
+
+data/*.parquet
+__pycache__/
