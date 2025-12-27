@@ -141,6 +141,24 @@ BDO is built using a lightweight yet powerful stack of tools for real-time drift
 
 ## System Pipeline Overview
 
+```bash
+Raw Behavioral Data
+        ↓
+Rolling Time Aggregation
+        ↓
+User-Specific Baseline Construction
+        ↓
+Behavior Representation Layer
+        ↓
+Drift Scoring Engine
+        ↓
+Drift Explanation Engine
+        ↓
+API Layer (FastAPI)
+        ↓
+Visualization & Insights Dashboard (Streamlit)
+```
+
 | Stage | Description |
 |--------|--------------|
 | **1. Raw Behavioral Data** | Source logs representing user interactions and events. |
@@ -157,26 +175,35 @@ BDO is built using a lightweight yet powerful stack of tools for real-time drift
 ##  Installation & Running the Project
 
 1. **Clone the repository:**:
+```bash
 git clone https://github.com/AryaSingh16/Behavior-Drift-Observatory.git
-
-2. **Install dependencies**:
+```
+3. **Install dependencies**:
+```bash
 pip install -r requirements.txt
-
-3. **Run the FastAPI backend:**
+```
+5. **Run the FastAPI backend:**
+```bash
 uvicorn src.api.main:app --reload
-
-4. **Launch the Streamlit dashboard:**
+```
+7. **Launch the Streamlit dashboard:**
+```bash
 streamlit run src/frontend/app.py
-
+```
 The FastAPI server provides drift scoring APIs, while the Streamlit interface visualizes user-level behavioral changes in real time.
 
 ## Access
 
 Once running locally, the system components can be accessed via:
 
-- **API Endpoint:** [http://127.0.0.1:8000](http://127.0.0.1:8000)  
-- **Web UI (Dashboard):** [http://localhost:8501](http://localhost:8501)
-
+- **API Endpoint:**
+```bash
+(http://127.0.0.1:8000)
+```
+- **Web UI (Dashboard):**
+```bash
+(http://localhost:8501)
+```
 ---
 
 ## Credits
